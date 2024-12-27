@@ -1,0 +1,150 @@
+/* Select2 Özel Stil Cssleri */
+
+/* ------------------------- Arama Alanı CSS'leri ------------------------- */
+.select2-container--custom-theme {
+    font-family: 'Poppins', sans-serif; /* Select2 container için font */
+    font-weight: 400; /* Yazı tipi kalınlığı */
+}
+
+/* Arama kutusunun stilini ayarlamak */
+.select2-container--custom-theme .select2-search {
+    position: relative; /* Arama kutusunun pozisyonunu göreceli olarak belirler */
+}
+
+/* Arama kutusu içindeki input alanı */
+.select2-container--custom-theme .select2-search__field {
+    padding-right: 30px; /* Arama alanının sağ tarafına boşluk ekler */
+    width: 100%; /* Arama alanını tam genişlikte yapar */
+    box-sizing: border-box; /* Padding ve border'ı genişlik hesaplamasına dahil eder */
+}
+
+/* Arama sonuçlarının her bir öğesinin stilini belirler */
+.select2-container--custom-theme .select2-results__option {
+    padding: 7px; /* Sonuç öğelerine iç boşluk ekler */
+}
+
+/* Arama kutusunun sağ tarafındaki büyüteç ikonunu yerleştirir */
+.select2-container--custom-theme .select2-search::before {
+    content: "\1F50E"; /* Unicode ile büyüteç simgesi */
+    font-weight: 900; /* Font ağırlığı */
+    position: absolute; /* İkonu konumlandırmak için mutlak pozisyon */
+    right: 10px; /* Sağdan 10px uzaklık */
+    top: 50%; /* Üstten ortalar */
+    transform: translateY(-50%); /* Y ekseninde ortalar */
+    font-size: 16px; /* İkon boyutu */
+    pointer-events: none; /* İkonun üzerine tıklanmasını engeller */
+}
+
+/* ------------------------- Scrollbar Özelleştirmeleri ------------------------- */
+
+/* Scrollbar track (yol) stilini belirler */
+.select2-container--custom-theme .select2-results::-webkit-scrollbar-track {
+    border-radius: 10px; /* Scrollbar yolunun yuvarlatılmış köşeleri */
+    background-color: #fff; /* Scrollbar yolunun arka plan rengi */
+}
+
+/* Scrollbar'ın kendisinin stilini belirler */
+.select2-container--custom-theme .select2-results::-webkit-scrollbar {
+    width: 4px; /* Scrollbar'ın genişliği */
+    background-color: #fff; /* Scrollbar'ın arka plan rengi */
+}
+
+/* Scrollbar thumb (kulp) stilini belirler */
+.select2-container--custom-theme .select2-results::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Scrollbar kulpunun yuvarlatılmış köşeleri */
+    background-color: #2cace5; /* Scrollbar kulpunun rengi */
+}
+
+/* ------------------------- Seçim ve Dropdown Alanı ------------------------- */
+
+/* Seçim kutusunun stilini belirler */
+.select2-container--custom-theme .select2-selection {
+    border: 1px solid #e4e9f2; /* Seçim kutusuna kenarlık */
+    border-radius: 4px; /* Yuvarlatılmış köşeler */
+}
+
+/* Dropdown (açılır liste) stilini belirler */
+.select2-container--custom-theme .select2-dropdown {
+    border: 1px solid #e4e9f2; /* Dropdown kenarlığı */
+}
+
+/* Dropdown arama kutusunun alt kenarlığını ayarlamak */
+.select2-container--custom-theme .select2-search--dropdown {
+    border-bottom: 1px solid #e4e9f2; /* Arama kutusunun alt sınırını belirler */
+}
+
+/* Dropdown arama kutusundaki input alanının kenarlığını sıfırlar */
+.select2-container--custom-theme .select2-search--dropdown .select2-search__field {
+    border: 0; /* Kenarlık yok */
+    outline: none; /* Fokus (odaklanma) kenarlığını kaldırır */
+}
+
+/* Seçili öğenin stilini belirler */
+.select2-container--custom-theme .select2-results__option--selected {
+    background-color: #fff; /* Seçilen öğenin arka planı beyaz */
+    color: #858796; /* Seçilen öğenin yazı rengi */
+}
+
+/* Vurgulanan (highlighted) öğelerin stilini belirler */
+.select2-container--custom-theme .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: rgba(247, 220, 153, 0.24); /* Vurgulanan öğenin arka plan rengi */
+    color: #2e3a59; /* Vurgulanan öğenin yazı rengi */
+}
+
+/* Seçim kutusundaki yazıyı ve ok işaretini özelleştirir */
+.select2-container--custom-theme .select2-selection__rendered {
+    padding: 7px 10px; /* Seçim kutusu içindeki yazıya boşluk ekler */
+    line-height: normal; /* Satır yüksekliğini normal yapar */
+    content: "\f0d7"; /* Aşağı ok simgesi */
+    background-repeat: no-repeat; /* Arka plan simgesinin tekrar etmemesi */
+    background-position: right 0.5vw center; /* Ok simgesinin sağda ve ortada konumlanması */
+    background-size: 16px 12px; /* Ok simgesinin boyutu */
+}
+
+/* Tekli seçimde ok simgesini gizler */
+.select2-container--custom-theme .select2-selection--single .select2-selection__arrow {
+    display: none; /* Ok simgesini gizler */
+}
+
+/* Açılır listede maksimum yükseklik ve scroll özelleştirmesi */
+.select2-container--custom-theme .select2-results {
+    max-height: 150px; /* Maksimum yükseklik */
+    overflow-y: scroll; /* Y ekseninde kaydırma ekler */
+}
+
+/* Açılır listede öğe listesinin scroll özelleştirmesi */
+.select2-container--custom-theme .select2-results > .select2-results__options {
+    overflow-y: hidden; /* Y ekseninde kaydırma gizlenir */
+    max-height: none; /* Yükseklik sınırı kaldırılır */
+}
+
+/* Disable edilmiş seçeneklerin stilini belirler */
+.select2-container--custom-theme.select2-container--disabled .select2-selection--single {
+    border: solid 1px #e4e9f2; /* Disabled seçim kutusu kenarlığı */
+    background-color: #f7f9fc; /* Disabled seçim kutusunun arka planı */
+}
+
+/* ------------------------- Tekli Seçim Kutusu Özelleştirmeleri ------------------------- */
+
+/* Seçim kutusunun ok işaretinin yüksekliğini ayarlar */
+.select2-container--custom-theme .select2-selection--single .select2-selection__arrow {
+    height: calc(1.8125rem + 2px); /* Ok simgesinin yüksekliği */
+}
+
+/* Seçim kutusunun genel stilini ayarlar */
+.select2-container--custom-theme .select2-selection--single {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Seçim kutusuna hafif gölge ekler */
+    height: auto; /* Seçim kutusunun yüksekliğini otomatik ayarlar */
+}
+
+/* Seçim kutusunun yatayda inline yerleşimini ayarlar */
+.select2-container--custom-theme {
+    display: inline-block; /* Yatayda blok düzeyinde yerleşim */
+    margin-right: 16px; /* Sağ tarafa boşluk ekler */
+}
+
+/* ------------------------- Disable Seçeneklerin Stili ------------------------- */
+.select2-container--custom-theme .select2-results__option[aria-disabled=true] {
+    color: #999; /* Disable edilmiş seçeneklerin yazı rengi */
+    background-color: #c0c0c0; /* Disable edilmiş seçeneklerin arka plan rengi */
+}

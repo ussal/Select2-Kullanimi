@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select2 Kullanımı</title>
+    <link rel="stylesheet" href="select2/select2.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <h1>Select2 Kullanımı</h1>
+    <p>
+      Select2'yi kullanmak için select2.min.css ve select2.min.js dosyarını
+      eklemeniz gerek. Select2, jquery kütüphanesini kullandığı için
+      jquery.js'ide eklemeniz grekir.
+    </p>
+    <small
+      >Not: select2'nin jquery'yi kullanabilmesi için jquery'nin daha önce
+      eklenmesi gerekir, sıralama önemlidir yani :)</small
+    >
+
+    <h2>Var olan Select'i Select2'ye Çevirmek</h2>
+    <p>
+      Bunun için javascript tarafında ilgili Select'in id'sini jquery ile
+      yapakalıyıp .select2() fonksiyonunun kullanmamız yeterli.
+    </p>
+    <i>Örnek kullanım</i>
+    <p>$("#standartSelect").select2();</p>
+    <h2>Standart Select</h2>
+    <div>
+      <select id="standartSelect">
+        <option value="1">Seçenek 1</option>
+        <option value="2">Seçenek 2</option>
+        <option value="3">Seçenek 3</option>
+        <option value="4">Seçenek 4</option>
+        <option value="5">Seçenek 5</option>
+      </select>
+    </div>
+    <h2>Width Option Select</h2>
+    <div style="width: 300px">
+      <select id="widthOptionSelect">
+        <option value="1">Seçenek 1</option>
+        <option value="2">Seçenek 2</option>
+        <option value="3">Seçenek 3</option>
+        <option value="4">Seçenek 4</option>
+        <option value="5">Seçenek 5</option>
+      </select>
+    </div>
+
+    <h2>Placeholder Select</h2>
+    <div style="width: 300px">
+      <select id="placeholderSelect">
+        <option value="-1">Seçiniz</option>
+        <option value="1">Seçenek 1</option>
+        <option value="2">Seçenek 2</option>
+        <option value="3">Seçenek 3</option>
+        <option value="4">Seçenek 4</option>
+        <option value="5">Seçenek 5</option>
+      </select>
+    </div>
+
+    <h2>DisabledOption Select</h2>
+    <div style="width: 300px">
+      <select id="disabledOptionSelect">
+        <option value="-1">Seçiniz</option>
+        <option value="1">Seçenek 1</option>
+        <option value="2" disabled>Seçenek 2</option>
+        <option value="3">Seçenek 3</option>
+        <option value="4" disabled>Seçenek 4</option>
+        <option value="5">Seçenek 5</option>
+      </select>
+    </div>
+
+    <h2>Multiple Select</h2>
+    <div style="width: 300px">
+      <select id="multipleSelect" multiple="multiple">
+        <option value="-1">Seçiniz</option>
+        <option value="1">Seçenek 1</option>
+        <option value="2">Seçenek 2</option>
+        <option value="3">Seçenek 3</option>
+        <option value="4">Seçenek 4</option>
+        <option value="5">Seçenek 5</option>
+      </select>
+      <strong id="getMultipleSelectValues">Get Values</strong>
+    </div>
+
+    <h2>Dynamic Select</h2>
+    <div style="width: 300px">
+      <select id="dynamicSelect"></select>
+    </div>
+
+    <h2>Styled Select</h2>
+    <div style="width: 300px">
+      <select id="styledSelect">
+        <option value="1">Seçenek 1</option>
+        <option value="2">Seçenek 2</option>
+        <option value="3">Seçenek 3</option>
+        <option value="4">Seçenek 4</option>
+        <option value="5">Seçenek 5</option>
+        <option value="6">Seçenek 6</option>
+        <option value="7">Seçenek 7</option>
+        <option value="8">Seçenek 8</option>
+        <option value="9">Seçenek 9</option>
+      </select>
+    </div>
+
+    <div style="height: 300px"></div>
+    <script src="jquery/jquery.js"></script>
+    <script src="select2/select2.min.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>
